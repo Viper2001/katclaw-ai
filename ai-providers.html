@@ -4,32 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Provider Costs — KatClaw™</title>
-    <meta name="description" content="Understand the ongoing costs of AI providers for your KatClaw agent. Claude subscription, API keys, and free options explained.">
+    <meta name="description" content="Understand the ongoing costs of AI providers. Claude subscription, API keys, and free options explained.">
     <link rel="icon" href="Kat-appicon-1024-scaled.png" type="image/png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #fff;
+            color: #1d1d1f;
             min-height: 100vh;
-            padding: 2rem;
+            -webkit-font-smoothing: antialiased;
         }
         
         .container {
-            max-width: 800px;
+            max-width: 680px;
             margin: 0 auto;
+            padding: 32px 24px;
         }
         
         .back-link {
-            color: #e94560;
+            color: #0066cc;
             text-decoration: none;
-            font-size: 0.85rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            margin-bottom: 1.75rem;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 24px;
         }
         
         .back-link:hover {
@@ -37,121 +36,102 @@
         }
         
         h1 {
-            font-size: 2rem;
-            margin-bottom: 0.4rem;
-            background: linear-gradient(135deg, #e94560, #ff6b9d);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 32px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 8px;
         }
         
         .subtitle {
-            font-size: 1rem;
-            color: #a0a0a0;
-            margin-bottom: 1.75rem;
+            font-size: 17px;
+            color: #86868b;
+            margin-bottom: 20px;
         }
         
         .intro {
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: #ccc;
-            margin-bottom: 1.75rem;
-            padding: 1.25rem;
-            background: rgba(233, 69, 96, 0.1);
-            border-left: 4px solid #e94560;
-            border-radius: 0 12px 12px 0;
-        }
-        
-        .intro strong {
-            color: #fff;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #1d1d1f;
+            padding: 14px 16px;
+            background: #fff3cd;
+            border-radius: 10px;
+            margin-bottom: 24px;
         }
         
         h2 {
-            font-size: 1.2rem;
-            margin: 2rem 0 0.85rem 0;
-            color: #fff;
+            font-size: 17px;
+            font-weight: 600;
+            margin: 24px 0 12px 0;
+            color: #1d1d1f;
         }
         
-        .provider-grid {
+        .providers {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 1.5rem;
-            margin: 1.5rem 0;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        @media (max-width: 550px) {
+            .providers { grid-template-columns: 1fr; }
+            h1 { font-size: 28px; }
         }
         
         .provider {
-            background: rgba(255,255,255,0.05);
-            padding: 1.25rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.1);
+            background: #f5f5f7;
+            padding: 14px;
+            border-radius: 10px;
         }
         
         .provider h3 {
-            font-size: 1rem;
-            margin-bottom: 0.4rem;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 2px;
         }
         
         .provider .price {
-            color: #e94560;
+            font-size: 13px;
             font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 0.6rem;
+            color: #0071e3;
+            margin-bottom: 6px;
         }
         
-        .provider .free {
-            color: #50c878;
+        .provider .price.free {
+            color: #34c759;
         }
         
         .provider p {
-            font-size: 0.85rem;
-            color: #a0a0a0;
-            line-height: 1.55;
-        }
-        
-        .provider .note {
-            font-size: 0.8rem;
-            color: #888;
-            margin-top: 0.4rem;
-            font-style: italic;
+            font-size: 12px;
+            color: #86868b;
+            line-height: 1.4;
+            margin: 0;
         }
         
         .tag {
             display: inline-block;
-            padding: 0.15rem 0.5rem;
-            border-radius: 20px;
-            font-size: 0.7rem;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-size: 9px;
             font-weight: 600;
-            margin-left: 0.4rem;
+            margin-left: 6px;
+            vertical-align: middle;
         }
         
-        .tag-recommended {
-            background: rgba(80, 200, 120, 0.2);
-            color: #50c878;
-        }
-        
-        .tag-budget {
-            background: rgba(74, 144, 217, 0.2);
-            color: #4a90d9;
-        }
-        
-        .tag-free {
-            background: rgba(80, 200, 120, 0.2);
-            color: #50c878;
-        }
+        .tag-rec { background: #d4edda; color: #155724; }
+        .tag-budget { background: #cce5ff; color: #004085; }
+        .tag-free { background: #d4edda; color: #155724; }
         
         .summary {
-            background: rgba(255,255,255,0.05);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin: 2rem 0;
+            background: #f5f5f7;
+            padding: 16px;
+            border-radius: 10px;
+            margin: 24px 0;
         }
         
         .summary h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.85rem;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 10px;
         }
         
         .summary ul {
@@ -160,52 +140,46 @@
         }
         
         .summary li {
-            padding: 0.4rem 0;
-            color: #ccc;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.6rem;
+            font-size: 13px;
+            color: #1d1d1f;
+            padding: 4px 0;
+            padding-left: 16px;
+            position: relative;
         }
         
         .summary li::before {
             content: "→";
-            color: #e94560;
+            position: absolute;
+            left: 0;
+            color: #0071e3;
         }
         
-        .footer {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            text-align: center;
-            color: #666;
-        }
-        
-        .footer a {
-            color: #e94560;
-            text-decoration: none;
+        .note {
+            font-size: 12px;
+            color: #86868b;
+            margin-top: 16px;
         }
         
         .cta {
             text-align: center;
-            margin: 2rem 0;
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid #d2d2d7;
         }
         
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #e94560, #ff6b9d);
+            background: #0071e3;
             color: #fff;
-            padding: 0.85rem 1.75rem;
-            font-size: 0.95rem;
-            font-weight: 600;
+            padding: 10px 20px;
+            font-size: 14px;
             text-decoration: none;
-            border-radius: 50px;
-            transition: transform 0.2s, box-shadow 0.2s;
+            border-radius: 980px;
+            transition: background 0.2s;
         }
         
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.4);
+            background: #0077ed;
         }
     </style>
 </head>
@@ -214,112 +188,89 @@
         <a href="index.html" class="back-link">← Back to Home</a>
         
         <h1>AI Provider Costs</h1>
-        <p class="subtitle">Understand the ongoing fees for your AI agent</p>
+        <p class="subtitle">Understand the ongoing fees for your AI agent.</p>
         
         <div class="intro">
-            <strong>Important:</strong> KatClaw is a one-time purchase, but your AI agent needs an AI provider to think. 
-            This is an <strong>ongoing cost</strong> — either a subscription or pay-as-you-go API usage. 
-            Choose the option that fits your budget and needs.
+            <strong>Important:</strong> KatClaw is a one-time purchase, but your agent needs an AI provider to think. 
+            This is an ongoing cost — either a subscription or pay-as-you-go API usage.
         </div>
         
-        <h2>💳 Subscription Options</h2>
-        <div class="provider-grid">
+        <h2>💳 Subscriptions</h2>
+        <div class="providers">
             <div class="provider">
-                <h3>🧠 Claude Pro <span class="tag tag-recommended">Recommended</span></h3>
+                <h3>🧠 Claude Pro <span class="tag tag-rec">Recommended</span></h3>
                 <div class="price">$20/month</div>
-                <p>Anthropic's Claude is the best AI for coding and complex tasks. The Pro subscription gives you generous usage limits and access to the latest models.</p>
-                <p class="note">Best overall experience. Ideal for daily use.</p>
+                <p>Best for coding and complex tasks. Generous usage limits.</p>
             </div>
-            
             <div class="provider">
                 <h3>🧠 Claude Max</h3>
                 <div class="price">$100/month</div>
-                <p>For power users who need 5× the usage of Pro. Includes priority access during peak times.</p>
-                <p class="note">Only if you hit Pro limits regularly.</p>
+                <p>5× Pro usage. For power users who hit limits.</p>
             </div>
         </div>
         
-        <h2>🔑 Pay-As-You-Go API Keys</h2>
-        <div class="provider-grid">
+        <h2>🔑 Pay-As-You-Go APIs</h2>
+        <div class="providers">
             <div class="provider">
                 <h3>🔮 DeepSeek <span class="tag tag-budget">Budget Pick</span></h3>
-                <div class="price">~$5-20/month typical</div>
-                <p>Very affordable API pricing. Great reasoning capabilities at a fraction of the cost. Works in China without VPN.</p>
-                <p class="note">$0.28/M input, $0.42/M output tokens</p>
+                <div class="price">~$5-20/month</div>
+                <p>Very affordable. Great reasoning. Works in China.</p>
             </div>
-            
             <div class="provider">
                 <h3>⚡ Grok (xAI)</h3>
                 <div class="price">Pay per use</div>
-                <p>Elon Musk's AI with real-time X/Twitter knowledge. 2M token context window — great for analyzing long documents.</p>
-                <p class="note">Good for social media analysis.</p>
+                <p>Real-time X/Twitter knowledge. 2M token context.</p>
             </div>
-            
             <div class="provider">
                 <h3>✨ ChatGPT (OpenAI)</h3>
                 <div class="price">Pay per use</div>
-                <p>The original. GPT-4o is fast and capable. Good all-rounder with strong tool use.</p>
-                <p class="note">Requires API key from platform.openai.com</p>
+                <p>GPT-4o is fast and capable. Good all-rounder.</p>
             </div>
-            
             <div class="provider">
                 <h3>🌙 Kimi (Moonshot)</h3>
-                <div class="price">~$10-30/month typical</div>
-                <p>256K context window. Affordable for heavy use. Works in China. Good for document analysis.</p>
-                <p class="note">$0.60/M input, $2.50/M output tokens</p>
+                <div class="price">~$10-30/month</div>
+                <p>256K context. Affordable. Works in China.</p>
             </div>
-            
             <div class="provider">
-                <h3>🔀 OpenRouter <span class="tag tag-recommended">Flexible</span></h3>
-                <div class="price">Pay per use (varies by model)</div>
-                <p>One API key, access to all frontier models — Claude, GPT, Gemini, Llama, and more. Perfect if you want to experiment or switch models without managing multiple accounts.</p>
-                <p class="note">Unified billing. Try any model instantly.</p>
+                <h3>🔀 OpenRouter <span class="tag tag-rec">Flexible</span></h3>
+                <div class="price">Varies by model</div>
+                <p>One API, all models — Claude, GPT, Gemini, Llama.</p>
             </div>
         </div>
         
         <h2>🆓 Free Options</h2>
-        <div class="provider-grid">
+        <div class="providers">
             <div class="provider">
                 <h3>💎 Gemini <span class="tag tag-free">Free Tier</span></h3>
                 <div class="price free">FREE (with limits)</div>
-                <p>Google's AI has a generous free tier via AI Studio. Great for getting started without any cost.</p>
-                <p class="note">Limited requests per minute. Good for light use.</p>
+                <p>Google's AI. Generous free tier via AI Studio.</p>
             </div>
-            
             <div class="provider">
-                <h3>🚀 Antigravity <span class="tag tag-free">Free via Google</span></h3>
+                <h3>🚀 Antigravity <span class="tag tag-free">Free</span></h3>
                 <div class="price free">FREE (Google OAuth)</div>
-                <p>Access Claude and Gemini models through your Google account. No API key needed!</p>
-                <p class="note">Uses Google OAuth. Easy setup.</p>
+                <p>Access Claude & Gemini via Google account.</p>
             </div>
-            
             <div class="provider">
                 <h3>💻 Local LLM <span class="tag tag-budget">Advanced</span></h3>
-                <div class="price free">FREE (runs on your Mac)</div>
-                <p>Run AI models locally with LM Studio or Ollama. No internet needed. Complete privacy.</p>
-                <p class="note">32GB RAM, M4 Max or better recommended.</p>
+                <div class="price free">FREE (runs locally)</div>
+                <p>LM Studio or Ollama. Needs 32GB RAM, M4 Max+.</p>
             </div>
         </div>
         
         <div class="summary">
             <h3>💡 Our Recommendations</h3>
             <ul>
-                <li><strong>Best experience:</strong> Claude Pro ($20/mo) — smartest, best for coding</li>
-                <li><strong>Best value:</strong> DeepSeek API (~$5-20/mo) — surprisingly capable, very affordable</li>
-                <li><strong>Most flexible:</strong> OpenRouter — one account, all frontier models</li>
-                <li><strong>Free start:</strong> Gemini or Antigravity — no cost to try</li>
-                <li><strong>Privacy first:</strong> Local LLM — free forever, runs offline</li>
-                <li><strong>China users:</strong> DeepSeek or Kimi — no VPN required</li>
+                <li><strong>Best experience:</strong> Claude Pro ($20/mo)</li>
+                <li><strong>Best value:</strong> DeepSeek API (~$5-20/mo)</li>
+                <li><strong>Most flexible:</strong> OpenRouter — one account, all models</li>
+                <li><strong>Free start:</strong> Gemini or Antigravity</li>
+                <li><strong>China users:</strong> DeepSeek or Kimi — no VPN needed</li>
             </ul>
         </div>
         
-        <p style="color: #888; font-size: 0.95rem; line-height: 1.6;">
-            You can switch providers anytime in KatClaw. Start with a free option, then upgrade when you need more power. 
-            Your agent's memories and settings stay the same — only the "brain" changes.
-        </p>
-        
-        <p style="color: #f1c40f; font-size: 0.85rem; margin-top: 1.5rem;">
-            * Pricing in USD as of Feb 2026. Prices may vary — check provider websites for current rates.
+        <p class="note">
+            You can switch providers anytime. Start free, upgrade when you need more power.
+            * Pricing as of Feb 2026. Check provider websites for current rates.
         </p>
         
         <div class="cta">
