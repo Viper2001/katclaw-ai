@@ -15,57 +15,52 @@
             color: #1d1d1f;
             min-height: 100vh;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
         
-        /* Hero Section */
+        /* Hero Section - Compact */
         .hero {
             text-align: center;
-            padding: 80px 24px 60px;
+            padding: 32px 24px 24px;
             background: linear-gradient(180deg, #fbfbfd 0%, #fff 100%);
         }
         
         .logo {
-            width: 140px;
-            height: 140px;
-            border-radius: 28px;
-            margin-bottom: 24px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
         }
         
         h1 {
-            font-size: 56px;
+            font-size: 36px;
             font-weight: 600;
             letter-spacing: -0.02em;
             color: #1d1d1f;
-            margin-bottom: 12px;
+            margin-bottom: 4px;
         }
         
         .tagline {
-            font-size: 24px;
+            font-size: 18px;
             font-weight: 400;
             color: #86868b;
-            margin-bottom: 20px;
+            margin-bottom: 12px;
         }
         
         .description {
-            font-size: 17px;
-            line-height: 1.6;
+            font-size: 15px;
+            line-height: 1.5;
             color: #1d1d1f;
-            max-width: 600px;
-            margin: 0 auto 32px;
-        }
-        
-        .description strong {
-            font-weight: 600;
+            max-width: 520px;
+            margin: 0 auto 16px;
         }
         
         .cta-button {
             display: inline-block;
             background: #0071e3;
             color: #fff;
-            padding: 12px 28px;
-            font-size: 17px;
+            padding: 10px 24px;
+            font-size: 15px;
             font-weight: 400;
             text-decoration: none;
             border-radius: 980px;
@@ -76,15 +71,10 @@
             background: #0077ed;
         }
         
-        .coming-soon {
-            background: #0071e3;
-            opacity: 0.9;
-        }
-        
         .price {
-            font-size: 14px;
+            font-size: 12px;
             color: #86868b;
-            margin-top: 16px;
+            margin-top: 10px;
         }
         
         .price strong {
@@ -92,16 +82,14 @@
             font-weight: 600;
         }
         
-        /* Links Section */
         .links {
-            margin: 24px 0 0;
+            margin: 12px 0 0;
         }
         
         .text-link {
             color: #0066cc;
             text-decoration: none;
-            font-size: 17px;
-            transition: color 0.2s;
+            font-size: 14px;
         }
         
         .text-link:hover {
@@ -110,96 +98,78 @@
         
         .link-separator {
             color: #d2d2d7;
-            margin: 0 16px;
+            margin: 0 12px;
         }
         
-        /* Features Section */
+        /* Features Section - Compact */
         .features-section {
             background: #f5f5f7;
-            padding: 80px 24px;
+            padding: 28px 24px 32px;
         }
         
         .features-section h2 {
             text-align: center;
-            font-size: 40px;
+            font-size: 24px;
             font-weight: 600;
             color: #1d1d1f;
-            margin-bottom: 48px;
+            margin-bottom: 20px;
         }
         
         .features {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            max-width: 1200px;
+            gap: 12px;
+            max-width: 1000px;
             margin: 0 auto;
         }
         
-        @media (max-width: 1000px) {
-            .features {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        @media (max-width: 900px) {
+            .features { grid-template-columns: repeat(2, 1fr); }
         }
         
-        @media (max-width: 600px) {
-            .features {
-                grid-template-columns: 1fr;
-            }
-            
-            h1 {
-                font-size: 40px;
-            }
-            
-            .tagline {
-                font-size: 20px;
-            }
-            
-            .features-section h2 {
-                font-size: 32px;
-            }
+        @media (max-width: 500px) {
+            .features { grid-template-columns: 1fr; }
+            h1 { font-size: 28px; }
+            .tagline { font-size: 16px; }
         }
         
         .feature {
             background: #fff;
-            padding: 32px 24px;
-            border-radius: 18px;
+            padding: 16px 14px;
+            border-radius: 12px;
             text-align: center;
         }
         
         .feature-icon {
-            font-size: 40px;
-            margin-bottom: 16px;
+            font-size: 28px;
+            margin-bottom: 6px;
         }
         
         .feature h3 {
-            font-size: 17px;
+            font-size: 13px;
             font-weight: 600;
             color: #1d1d1f;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
         
         .feature p {
-            font-size: 14px;
+            font-size: 11px;
             color: #86868b;
-            line-height: 1.5;
+            line-height: 1.4;
         }
         
-        /* Footer */
+        /* Footer - Compact */
         .footer {
             text-align: center;
-            padding: 40px 24px;
+            padding: 16px 24px;
             color: #86868b;
-            font-size: 12px;
+            font-size: 11px;
             border-top: 1px solid #d2d2d7;
         }
         
         .footer a {
             color: #0066cc;
             text-decoration: none;
-        }
-        
-        .footer a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -211,10 +181,10 @@
         
         <p class="description">
             One-click installer for <strong>OpenClaw</strong>, the #1 AI agent platform.<br>
-            Get your personal AI assistant running on Mac in minutes — no coding required.
+            Get your personal AI assistant running on Mac in minutes.
         </p>
         
-        <a href="#" class="cta-button coming-soon">Coming Soon</a>
+        <a href="#" class="cta-button">Coming Soon</a>
         
         <p class="price">Early Bird: <strong>US$10</strong> (first 10,000) · Then US$19</p>
         
@@ -233,50 +203,49 @@
             <div class="feature">
                 <div class="feature-icon">⚡</div>
                 <h3>One-Click Install</h3>
-                <p>No terminal. No npm. No config files. Just click and go.</p>
+                <p>No terminal. No npm. No config files.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">🎛️</div>
                 <h3>Visual Dashboard</h3>
-                <p>Manage everything from a clean macOS interface.</p>
+                <p>Clean macOS interface. No command line.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">🤖</div>
                 <h3>10 AI Providers</h3>
-                <p>Claude, ChatGPT, Gemini, DeepSeek, Grok, and more.</p>
+                <p>Claude, ChatGPT, Gemini, DeepSeek & more.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">🔄</div>
                 <h3>Switch Instantly</h3>
-                <p>Change AI providers on the fly. No editing required.</p>
+                <p>Change AI providers on the fly.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">🛡️</div>
                 <h3>Security Controls</h3>
-                <p>Three protection levels. You decide what your agent can do.</p>
+                <p>Three levels. You're in control.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">💾</div>
                 <h3>Backup & Restore</h3>
-                <p>Export settings and memories. Restore anytime.</p>
+                <p>Export settings and memories.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">💬</div>
                 <h3>Chat Anywhere</h3>
-                <p>Telegram integration. Talk from your phone.</p>
+                <p>Telegram. Talk from your phone.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">🔒</div>
                 <h3>Runs Locally</h3>
-                <p>Your data stays on your Mac. Full privacy.</p>
+                <p>Your data stays on your Mac.</p>
             </div>
         </div>
     </section>
     
     <footer class="footer">
         Powered by <a href="https://openclaw.ai" target="_blank">OpenClaw</a> · 
-        Built by <a href="https://apollooneapp.com" target="_blank">Anogeissus</a> · 
-        © 2026 Anogeissus
+        Built by <a href="https://apollooneapp.com" target="_blank">Anogeissus</a> · © 2026
     </footer>
 </body>
 </html>
