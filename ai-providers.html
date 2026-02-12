@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Provider Costs — KatClaw™</title>
+    <meta name="description" content="Understand the ongoing costs of AI providers for your KatClaw agent. Claude subscription, API keys, and free options explained.">
+    <link rel="icon" href="Kat-appicon-1024-scaled.png" type="image/png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            color: #e94560;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #e94560, #ff6b9d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            margin-bottom: 2rem;
+        }
+        
+        .intro {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ccc;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(233, 69, 96, 0.1);
+            border-left: 4px solid #e94560;
+            border-radius: 0 12px 12px 0;
+        }
+        
+        .intro strong {
+            color: #fff;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1rem 0;
+            color: #fff;
+        }
+        
+        .provider-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .provider {
+            background: rgba(255,255,255,0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .provider h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .provider .price {
+            color: #e94560;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .provider .free {
+            color: #50c878;
+        }
+        
+        .provider p {
+            font-size: 0.95rem;
+            color: #a0a0a0;
+            line-height: 1.6;
+        }
+        
+        .provider .note {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+        
+        .tag-recommended {
+            background: rgba(80, 200, 120, 0.2);
+            color: #50c878;
+        }
+        
+        .tag-budget {
+            background: rgba(74, 144, 217, 0.2);
+            color: #4a90d9;
+        }
+        
+        .tag-free {
+            background: rgba(80, 200, 120, 0.2);
+            color: #50c878;
+        }
+        
+        .summary {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2.5rem 0;
+        }
+        
+        .summary h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .summary ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .summary li {
+            padding: 0.5rem 0;
+            color: #ccc;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        
+        .summary li::before {
+            content: "→";
+            color: #e94560;
+        }
+        
+        .footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: #666;
+        }
+        
+        .footer a {
+            color: #e94560;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <h1>AI Provider Costs</h1>
+        <p class="subtitle">Understand the ongoing fees for your AI agent</p>
+        
+        <div class="intro">
+            <strong>Important:</strong> KatClaw is a one-time purchase, but your AI agent needs an AI provider to think. 
+            This is an <strong>ongoing cost</strong> — either a subscription or pay-as-you-go API usage. 
+            Choose the option that fits your budget and needs.
+        </div>
+        
+        <h2>💳 Subscription Options</h2>
+        <div class="provider-grid">
+            <div class="provider">
+                <h3>🧠 Claude Pro <span class="tag tag-recommended">Recommended</span></h3>
+                <div class="price">$20/month</div>
+                <p>Anthropic's Claude is the best AI for coding and complex tasks. The Pro subscription gives you generous usage limits and access to the latest models.</p>
+                <p class="note">Best overall experience. Ideal for daily use.</p>
+            </div>
+            
+            <div class="provider">
+                <h3>🧠 Claude Max</h3>
+                <div class="price">$100/month</div>
+                <p>For power users who need 5× the usage of Pro. Includes priority access during peak times.</p>
+                <p class="note">Only if you hit Pro limits regularly.</p>
+            </div>
+        </div>
+        
+        <h2>🔑 Pay-As-You-Go API Keys</h2>
+        <div class="provider-grid">
+            <div class="provider">
+                <h3>🔮 DeepSeek <span class="tag tag-budget">Budget Pick</span></h3>
+                <div class="price">~$1-5/month typical</div>
+                <p>Extremely affordable API pricing. Great reasoning capabilities at a fraction of the cost. Works in China without VPN.</p>
+                <p class="note">$0.14/M input, $2.19/M output tokens</p>
+            </div>
+            
+            <div class="provider">
+                <h3>⚡ Grok (xAI)</h3>
+                <div class="price">Pay per use</div>
+                <p>Elon Musk's AI with real-time X/Twitter knowledge. 2M token context window — great for analyzing long documents.</p>
+                <p class="note">Good for social media analysis.</p>
+            </div>
+            
+            <div class="provider">
+                <h3>✨ ChatGPT (OpenAI)</h3>
+                <div class="price">Pay per use</div>
+                <p>The original. GPT-4o is fast and capable. Good all-rounder with strong tool use.</p>
+                <p class="note">Requires API key from platform.openai.com</p>
+            </div>
+            
+            <div class="provider">
+                <h3>🌙 Kimi (Moonshot)</h3>
+                <div class="price">~$1-3/month typical</div>
+                <p>256K context window. Very affordable. Works in China. Good for document analysis.</p>
+                <p class="note">Chinese provider, competitive pricing.</p>
+            </div>
+        </div>
+        
+        <h2>🆓 Free Options</h2>
+        <div class="provider-grid">
+            <div class="provider">
+                <h3>💎 Gemini <span class="tag tag-free">Free Tier</span></h3>
+                <div class="price free">FREE (with limits)</div>
+                <p>Google's AI has a generous free tier via AI Studio. Great for getting started without any cost.</p>
+                <p class="note">Limited requests per minute. Good for light use.</p>
+            </div>
+            
+            <div class="provider">
+                <h3>🚀 Antigravity <span class="tag tag-free">Free via Google</span></h3>
+                <div class="price free">FREE (Google OAuth)</div>
+                <p>Access Claude and Gemini models through your Google account. No API key needed!</p>
+                <p class="note">Uses Google OAuth. Easy setup.</p>
+            </div>
+            
+            <div class="provider">
+                <h3>💻 Local LLM <span class="tag tag-free">Free Forever</span></h3>
+                <div class="price free">FREE (runs on your Mac)</div>
+                <p>Run AI models locally with LM Studio or Ollama. No internet needed. Complete privacy.</p>
+                <p class="note">Requires 32GB+ RAM for best results.</p>
+            </div>
+        </div>
+        
+        <div class="summary">
+            <h3>💡 Our Recommendations</h3>
+            <ul>
+                <li><strong>Best experience:</strong> Claude Pro ($20/mo) — smartest, best for coding</li>
+                <li><strong>Best value:</strong> DeepSeek API (~$1-5/mo) — surprisingly capable, very cheap</li>
+                <li><strong>Free start:</strong> Gemini or Antigravity — no cost to try</li>
+                <li><strong>Privacy first:</strong> Local LLM — free forever, runs offline</li>
+                <li><strong>China users:</strong> DeepSeek or Kimi — no VPN required</li>
+            </ul>
+        </div>
+        
+        <p style="color: #888; font-size: 0.95rem; line-height: 1.6;">
+            You can switch providers anytime in KatClaw. Start with a free option, then upgrade when you need more power. 
+            Your agent's memories and settings stay the same — only the "brain" changes.
+        </p>
+        
+        <div class="footer">
+            <a href="index.html">← Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
