@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KatClaw — AI Agent Made Easy</title>
+    <meta name="description" content="One-click installer for OpenClaw, the #1 AI agent platform. Get your personal AI assistant running on Mac in minutes.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐱</text></svg>">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #e94560, #ff6b9d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            color: #a0a0a0;
+            margin-bottom: 2rem;
+        }
+        
+        .description {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #ccc;
+            margin-bottom: 3rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #e94560, #ff6b9d);
+            color: #fff;
+            padding: 1rem 3rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.4);
+        }
+        
+        .coming-soon {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(233, 69, 96, 0.5);
+            cursor: default;
+        }
+        
+        .coming-soon:hover {
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .feature {
+            background: rgba(255,255,255,0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature p {
+            font-size: 0.9rem;
+            color: #a0a0a0;
+        }
+        
+        .footer {
+            margin-top: 4rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .footer a {
+            color: #e94560;
+            text-decoration: none;
+        }
+        
+        .price {
+            font-size: 1.1rem;
+            color: #a0a0a0;
+            margin-top: 1rem;
+        }
+        
+        .price strong {
+            color: #e94560;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🐱</div>
+        <h1>KatClaw</h1>
+        <p class="tagline">AI Agent Made Easy</p>
+        
+        <p class="description">
+            One-click installer for <strong>OpenClaw</strong>, the #1 AI agent platform.<br>
+            Get your personal AI assistant running on Mac in minutes — no coding required.
+        </p>
+        
+        <a href="#" class="cta-button coming-soon">Coming Soon</a>
+        
+        <p class="price">Early Bird: <strong>$10</strong> (first 10,000 users)</p>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <h3>One-Click Install</h3>
+                <p>No terminal, no npm, no config files. Just click and go.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🤖</div>
+                <h3>8+ AI Providers</h3>
+                <p>Claude, GPT, Gemini, DeepSeek, Grok, Kimi & more.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💬</div>
+                <h3>Chat Anywhere</h3>
+                <p>Telegram integration. Talk to your AI from your phone.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔒</div>
+                <h3>Your Data, Your Mac</h3>
+                <p>Runs locally. No cloud middleman. Full privacy.</p>
+            </div>
+        </div>
+        
+        <p class="footer">
+            Powered by <a href="https://openclaw.ai" target="_blank">OpenClaw</a> · 
+            Built by <a href="https://apollooneapp.com" target="_blank">Anogeissus</a>
+        </p>
+    </div>
+</body>
+</html>
