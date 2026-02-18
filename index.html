@@ -74,24 +74,6 @@
             background: #0077ed;
         }
         
-        /* Pulse animation for Coming Soon */
-        @keyframes pulse {
-            0%, 100% { 
-                transform: scale(1); 
-                box-shadow: 0 4px 15px rgba(0, 113, 227, 0.3); 
-            }
-            50% { 
-                transform: scale(1.03); 
-                box-shadow: 0 6px 25px rgba(0, 113, 227, 0.5); 
-            }
-        }
-        
-        .coming-soon {
-            animation: pulse 2.5s ease-in-out infinite;
-            margin: 20px 0;
-            display: inline-block;
-        }
-        
         .price {
             font-size: 14px;
             color: #1d1d1f;
@@ -213,11 +195,13 @@
             Get your personal AI assistant running on Mac in minutes.
         </p>
         
-        <a href="#" class="cta-button coming-soon">Coming Soon</a>
+        <a href="purchase.html" class="cta-button">Get KatClaw</a>
         
         <p class="price">🎁 <strong>FREE</strong> for the first 100 users · Then US$19</p>
         
         <div class="links">
+            <a href="purchase.html" class="text-link">Purchase</a>
+            <span class="link-separator">|</span>
             <a href="why-ai-agent.html" class="text-link">Why AI Agent?</a>
             <span class="link-separator">|</span>
             <a href="hardware.html" class="text-link">Hardware</a>

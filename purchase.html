@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get KatClaw™ — Purchase a License</title>
+    <meta name="description" content="Get your KatClaw license. Free for the first 100 founding users, then US$19.">
+    <link rel="icon" href="Kat-appicon-1024-scaled.png" type="image/png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #fff;
+            color: #1d1d1f;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 32px 24px;
+        }
+        
+        .back-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .back-link:hover { text-decoration: underline; }
+        
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin: 20px 0 8px;
+        }
+        
+        .subtitle {
+            font-size: 17px;
+            color: #6e6e73;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+        
+        .plans {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        
+        @media (max-width: 600px) {
+            .plans { grid-template-columns: 1fr; }
+        }
+        
+        .plan {
+            border: 2px solid #d2d2d7;
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            transition: border-color 0.2s;
+            position: relative;
+        }
+        
+        .plan-founding {
+            border-color: #e94560;
+            background: linear-gradient(180deg, #fff5f7 0%, #fff 60%);
+        }
+        
+        .plan-badge {
+            display: inline-block;
+            background: #e94560;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 980px;
+            margin-bottom: 12px;
+        }
+        
+        .plan h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .plan-price {
+            font-size: 36px;
+            font-weight: 600;
+            margin: 8px 0;
+        }
+        
+        .plan-price .currency {
+            font-size: 20px;
+            vertical-align: super;
+            font-weight: 400;
+        }
+        
+        .plan-note {
+            font-size: 13px;
+            color: #6e6e73;
+            margin-bottom: 16px;
+            min-height: 36px;
+        }
+        
+        .plan-features {
+            text-align: left;
+            margin: 16px 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .plan-features li {
+            font-size: 14px;
+            color: #1d1d1f;
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .plan-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #34c759;
+            font-weight: 600;
+        }
+        
+        .plan-button {
+            display: inline-block;
+            width: 100%;
+            padding: 12px 24px;
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 980px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .plan-button-founding {
+            background: #e94560;
+            color: #fff;
+        }
+        
+        .plan-button-founding:hover {
+            background: #d63d56;
+        }
+        
+        .plan-button-buy {
+            background: #0071e3;
+            color: #fff;
+        }
+        
+        .plan-button-buy:hover {
+            background: #0077ed;
+        }
+        
+        .plan-button:disabled {
+            background: #d2d2d7;
+            color: #86868b;
+            cursor: not-allowed;
+        }
+        
+        .remaining {
+            font-size: 13px;
+            color: #e94560;
+            font-weight: 500;
+            margin-top: 8px;
+        }
+        
+        .plan-hidden {
+            display: none;
+        }
+        
+        .faq {
+            margin-top: 40px;
+        }
+        
+        .faq h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .faq-item {
+            border-top: 1px solid #d2d2d7;
+            padding: 16px 0;
+        }
+        
+        .faq-item h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .faq-item p {
+            font-size: 14px;
+            color: #6e6e73;
+            line-height: 1.5;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 24px;
+            color: #86868b;
+            font-size: 13px;
+            border-top: 1px solid #d2d2d7;
+            margin-top: 40px;
+        }
+        
+        .footer a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .plan h2 { font-size: 22px !important; }
+            .plan-features li { font-size: 15px !important; }
+            .plan-note { font-size: 14px !important; }
+            .subtitle { font-size: 16px !important; }
+            .back-link { font-size: 17px !important; }
+            .faq-item h3 { font-size: 17px !important; }
+            .faq-item p { font-size: 15px !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← KatClaw</a>
+        
+        <h1>Get KatClaw</h1>
+        <p class="subtitle">One-time purchase. No subscription. Free updates forever.</p>
+        
+        <div class="plans">
+            <!-- Founding License -->
+            <div class="plan plan-founding" id="founding-plan">
+                <div class="plan-badge">🎁 Limited Edition</div>
+                <h2>Founding License</h2>
+                <div class="plan-price">Free</div>
+                <p class="plan-note">For our first 100 users.<br>Same features as paid — forever.</p>
+                <ul class="plan-features">
+                    <li>All features included</li>
+                    <li>Lifetime license, no expiry</li>
+                    <li>Free updates forever</li>
+                    <li>"Founding Member" badge</li>
+                </ul>
+                <button class="plan-button plan-button-founding" id="founding-button" onclick="openFoundingCheckout()">
+                    Claim Free License
+                </button>
+                <div class="remaining" id="remaining-text"></div>
+            </div>
+            
+            <!-- Standard License -->
+            <div class="plan">
+                <h2 style="margin-top: 12px;">Standard License</h2>
+                <div class="plan-price"><span class="currency">$</span>19</div>
+                <p class="plan-note">One-time payment.<br>Cheaper than one month of ChatGPT Plus.</p>
+                <ul class="plan-features">
+                    <li>All features included</li>
+                    <li>Lifetime license, no expiry</li>
+                    <li>Free updates forever</li>
+                    <li>Support indie development</li>
+                </ul>
+                <button class="plan-button plan-button-buy" onclick="openPaidCheckout()">
+                    Buy Now — $19
+                </button>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <h2>Questions</h2>
+            
+            <div class="faq-item">
+                <h3>What do I need besides KatClaw?</h3>
+                <p>A Mac (Apple Silicon recommended) and an AI provider API key. Some providers like DeepSeek offer very affordable rates — as low as $0.50 per million tokens. <a href="ai-providers.html">See AI provider costs →</a></p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Is the founding license really free?</h3>
+                <p>Yes. No credit card required. Same features as the paid version, forever. We're giving away 100 to build our early community.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Can I transfer my license to another Mac?</h3>
+                <p>Yes. Deactivate on your old Mac, activate on the new one. One Mac at a time.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>What's your refund policy?</h3>
+                <p>30-day money-back guarantee, no questions asked.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>I lost my license key</h3>
+                <p>Enter the same email you used at checkout and we'll find your existing license.</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        Built by <a href="https://apollooneapp.com" target="_blank">Anogeissus</a> · © 2026<br>
+        <a href="privacy.html" style="color: #86868b; margin-right: 12px;">Privacy</a>
+        <a href="termsofuse.html" style="color: #86868b;">Terms of Use</a>
+    </footer>
+
+    <!-- Paddle.js -->
+    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+    <script>
+        // ============================================================
+        // TODO: Replace these with your actual Paddle IDs
+        // ============================================================
+        const PADDLE_CLIENT_TOKEN  = "live_462a222d13c2013cb636767e5eb";
+        const PADDLE_FOUNDING_PRICE_ID = "pri_01khsant2jys2ajtkg3zc0tve1";
+        const PADDLE_PAID_PRICE_ID     = "pri_01khsbr152aw4z3bnxt2ymncft";
+        const WORKER_URL = "https://katclaw-paddle-webhook.albert-a40.workers.dev";
+        // ============================================================
+
+        // Initialize Paddle
+        // For sandbox testing, use: Paddle.Environment.set("sandbox");
+        Paddle.Initialize({ token: PADDLE_CLIENT_TOKEN });
+
+        // Check founding availability on load
+        async function checkFoundingAvailability() {
+            try {
+                const res = await fetch(`${WORKER_URL}/founding/count`);
+                const data = await res.json();
+                
+                const plan = document.getElementById("founding-plan");
+                const button = document.getElementById("founding-button");
+                const remaining = document.getElementById("remaining-text");
+                
+                if (data.remaining <= 0) {
+                    plan.classList.add("plan-hidden");
+                } else {
+                    remaining.textContent = `${data.remaining} of 100 remaining`;
+                }
+            } catch (err) {
+                // If we can't check, still show the button
+                console.error("Could not check founding availability:", err);
+            }
+        }
+        
+        checkFoundingAvailability();
+
+        function openFoundingCheckout() {
+            Paddle.Checkout.open({
+                items: [{ priceId: PADDLE_FOUNDING_PRICE_ID, quantity: 1 }],
+                successUrl: `${window.location.origin}/thank-you.html`
+            });
+        }
+
+        function openPaidCheckout() {
+            Paddle.Checkout.open({
+                items: [{ priceId: PADDLE_PAID_PRICE_ID, quantity: 1 }],
+                successUrl: `${window.location.origin}/thank-you.html`
+            });
+        }
+    </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/698e7e8f75334a1c3b4983ab/1jha9so9t';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+</html>
