@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features & Screenshots — KatClaw™</title>
+    <meta name="description" content="See KatClaw in action. Native macOS utility for installing and managing OpenClaw automation.">
+    <link rel="icon" href="Kat-appicon-1024-scaled.png" type="image/png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #fff;
+            color: #1d1d1f;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 32px 24px;
+        }
+        
+        .back-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .back-link:hover { text-decoration: underline; }
+        
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin: 20px 0 8px;
+        }
+        
+        .subtitle {
+            font-size: 17px;
+            color: #6e6e73;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+        
+        .screenshot-section {
+            margin-bottom: 48px;
+        }
+        
+        .screenshot-section h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .screenshot-section p {
+            font-size: 15px;
+            color: #6e6e73;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        
+        .screenshot-section ul {
+            margin: 0 0 16px 20px;
+        }
+        
+        .screenshot-section li {
+            font-size: 14px;
+            color: #6e6e73;
+            line-height: 1.6;
+            margin-bottom: 4px;
+        }
+        
+        .screenshot-img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border: 1px solid #e5e5e5;
+            display: block;
+        }
+        
+        .screenshot-caption {
+            font-size: 13px;
+            color: #86868b;
+            margin-top: 8px;
+            text-align: center;
+            max-width: 600px;
+        }
+        
+        .highlight-box {
+            background: #f5f5f7;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 32px 0;
+        }
+        
+        .highlight-box h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .highlight-box p {
+            font-size: 14px;
+            color: #6e6e73;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        
+        .cta {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid #d2d2d7;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #0071e3;
+            color: #fff;
+            padding: 12px 28px;
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 980px;
+            transition: background 0.2s;
+            margin: 0 8px;
+        }
+        
+        .cta-button:hover { background: #0077ed; }
+        
+        .footer {
+            text-align: center;
+            padding: 24px;
+            color: #86868b;
+            font-size: 13px;
+            border-top: 1px solid #d2d2d7;
+            margin-top: 40px;
+        }
+        
+        .footer a { color: #0066cc; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .screenshot-section h2 { font-size: 20px !important; }
+            .screenshot-section p, .screenshot-section li { font-size: 16px !important; }
+            .subtitle { font-size: 16px !important; }
+            .back-link { font-size: 17px !important; }
+            .highlight-box h3 { font-size: 18px !important; }
+            .highlight-box p { font-size: 15px !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <h1>Features & Screenshots</h1>
+        <p class="subtitle">A native macOS utility for setting up and managing OpenClaw automation. No terminal required.</p>
+        
+        <!-- Dashboard -->
+        <div class="screenshot-section">
+            <h2>Dashboard</h2>
+            <p>The main control panel lives in your menu bar. See status at a glance — which provider is active, security level, uptime, and gateway state. One click to access any setting.</p>
+            <img src="screenshots/dashboard.jpg" alt="KatClaw dashboard showing status, provider, and controls" class="screenshot-img">
+            <p class="screenshot-caption">KatClaw dashboard — menu bar app with full status overview</p>
+        </div>
+        
+        <!-- Installation -->
+        <div class="screenshot-section">
+            <h2>Guided Setup Wizard</h2>
+            <p>Step-by-step installation with clear explanations. Choose your deployment mode, configure providers, and set security — all through a visual interface.</p>
+            <ul>
+                <li><strong>Direct macOS</strong> — recommended for most users. Full performance, instant access.</li>
+                <li><strong>Virtual Machine</strong> — advanced option for sandboxed, isolated environments.</li>
+            </ul>
+            <img src="screenshots/installation.jpg" alt="KatClaw setup wizard showing installation mode selection" class="screenshot-img">
+            <p class="screenshot-caption">Setup wizard — guided installation with clear options</p>
+        </div>
+        
+        <!-- Security -->
+        <div class="screenshot-section">
+            <h2>Security Controls</h2>
+            <p>Three security levels give you full control over what automation can do on your system:</p>
+            <ul>
+                <li><strong>Conservative (default)</strong> — no shell commands allowed. Safest option.</li>
+                <li><strong>Moderate</strong> — only explicitly allowlisted commands can run.</li>
+                <li><strong>Full Access</strong> — unrestricted. For advanced users who understand the risks.</li>
+            </ul>
+            <img src="screenshots/security.jpg" alt="KatClaw security settings with three protection levels" class="screenshot-img">
+            <p class="screenshot-caption">Security settings — you decide exactly what automation can access</p>
+        </div>
+        
+        <!-- Highlight box -->
+        <div class="highlight-box">
+            <h3>🔐 Local-Only Architecture</h3>
+            <p>KatClaw runs entirely on your Mac. No cloud servers, no hosted services, no data collection. Your files, configurations, and task logs never leave your machine. KatClaw is a configuration utility — it manages OpenClaw settings, providers, security, and backups through a clean native interface.</p>
+        </div>
+        
+        <div class="cta">
+            <a href="purchase.html" class="cta-button">Get KatClaw</a>
+            <a href="download.html" class="cta-button" style="background: #1d1d1f;">Download</a>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        Built by <a href="https://apollooneapp.com" target="_blank">Anogeissus</a> · © 2026<br>
+        <a href="privacy.html" style="color: #86868b; margin-right: 12px;">Privacy</a>
+        <a href="termsofuse.html" style="color: #86868b; margin-right: 12px;">Terms of Use</a>
+        <a href="refund.html" style="color: #86868b;">Refund Policy</a>
+    </footer>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/698e7e8f75334a1c3b4983ab/1jha9so9t';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+</html>
