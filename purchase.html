@@ -502,7 +502,17 @@
         const PADDLE_PAID_PRICE_ID = "pri_01khsbr152aw4z3bnxt2ymncft";
         const WORKER_URL = "https://katclaw-paddle-webhook.albert-a40.workers.dev";
 
-        Paddle.Initialize({ token: PADDLE_CLIENT_TOKEN });
+        Paddle.Initialize({
+            token: PADDLE_CLIENT_TOKEN,
+            eventCallback: function(event) {
+                if (event.name === "checkout.completed") {
+                    const transactionId = event.data?.transaction_id;
+                    if (transactionId) {
+                        window.location.href = `/thank-you.html?_ptxn=${transactionId}`;
+                    }
+                }
+            }
+        });
 
         // Check founding availability
         async function checkFoundingAvailability() {
