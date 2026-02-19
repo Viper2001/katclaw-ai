@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ — KatClaw™</title>
+    <meta name="description" content="Frequently asked questions about KatClaw — licensing, transfers, recovery, and more.">
+    <link rel="icon" href="Kat-appicon-1024-scaled.png" type="image/png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #fff;
+            color: #1d1d1f;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 32px 24px;
+        }
+        
+        .back-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .back-link:hover { text-decoration: underline; }
+        
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin: 20px 0 8px;
+        }
+        
+        .subtitle {
+            font-size: 17px;
+            color: #6e6e73;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+        
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 32px 0 16px;
+            color: #1d1d1f;
+        }
+
+        .faq-item {
+            border-top: 1px solid #d2d2d7;
+            padding: 16px 0;
+        }
+        
+        .faq-item h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .faq-item p {
+            font-size: 14px;
+            color: #6e6e73;
+            line-height: 1.6;
+        }
+
+        .faq-item a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .faq-item a:hover { text-decoration: underline; }
+        
+        .faq-item ol, .faq-item ul {
+            margin: 8px 0 0 20px;
+        }
+
+        .faq-item li {
+            font-size: 14px;
+            color: #6e6e73;
+            line-height: 1.6;
+            margin-bottom: 4px;
+        }
+
+        /* Recovery modal styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-overlay.active { display: flex; }
+        
+        .modal {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px;
+            max-width: 420px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .modal h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .modal p {
+            font-size: 14px;
+            color: #6e6e73;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .modal input {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 16px;
+            border: 2px solid #d2d2d7;
+            border-radius: 10px;
+            outline: none;
+            margin-bottom: 12px;
+            text-align: center;
+            font-family: inherit;
+        }
+        
+        .modal input:focus { border-color: #0071e3; }
+        
+        .modal-button {
+            width: 100%;
+            padding: 12px;
+            font-size: 15px;
+            font-weight: 500;
+            background: #0071e3;
+            color: #fff;
+            border: none;
+            border-radius: 980px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .modal-button:hover { background: #0077ed; }
+        .modal-button:disabled { background: #d2d2d7; color: #86868b; cursor: not-allowed; }
+        
+        .modal-cancel {
+            display: inline-block;
+            margin-top: 12px;
+            color: #6e6e73;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+        
+        .modal-cancel:hover { color: #1d1d1f; }
+        
+        .modal-error {
+            color: #ff3b30;
+            font-size: 13px;
+            margin-bottom: 12px;
+            min-height: 18px;
+        }
+        
+        .key-box {
+            background: #f5f5f7;
+            border: 2px solid #d2d2d7;
+            border-radius: 12px;
+            padding: 16px;
+            margin: 12px 0;
+        }
+        
+        .key-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #6e6e73;
+            margin-bottom: 6px;
+        }
+        
+        .key-value {
+            font-size: 15px;
+            font-weight: 600;
+            font-family: 'SF Mono', SFMono-Regular, Menlo, Monaco, monospace;
+            word-break: break-all;
+            user-select: all;
+        }
+
+        .code-input {
+            letter-spacing: 8px;
+            font-size: 24px !important;
+            font-weight: 600;
+            font-family: 'SF Mono', SFMono-Regular, Menlo, Monaco, monospace !important;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 24px;
+            color: #86868b;
+            font-size: 13px;
+            border-top: 1px solid #d2d2d7;
+            margin-top: 40px;
+        }
+        
+        .footer a { color: #0066cc; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .faq-item h3 { font-size: 17px !important; }
+            .faq-item p, .faq-item li { font-size: 15px !important; }
+            .subtitle { font-size: 16px !important; }
+            .back-link { font-size: 17px !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <h1>FAQ</h1>
+        <p class="subtitle">Everything you need to know about KatClaw.</p>
+        
+        <!-- Getting Started -->
+        <h2>Getting Started</h2>
+        
+        <div class="faq-item">
+            <h3>What do I need to run KatClaw?</h3>
+            <p>A Mac (Apple Silicon recommended) and an AI provider API key. Some providers like DeepSeek offer very affordable rates — as low as $0.50 per million tokens. <a href="ai-providers.html">See AI provider costs →</a></p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>How do I install KatClaw?</h3>
+            <p>Download the .dmg file, drag KatClaw to your Applications folder, and launch it. The setup wizard will guide you through the rest.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Does KatClaw work on Intel Macs?</h3>
+            <p>KatClaw requires macOS 14 (Sonoma) or later. It works on Intel Macs, but Apple Silicon is recommended for the best experience with local AI features.</p>
+        </div>
+
+        <!-- Licensing -->
+        <h2>Licensing</h2>
+        
+        <div class="faq-item">
+            <h3>Is the founding license really free?</h3>
+            <p>Yes. No credit card required. Just verify your email and you're in. Same features as the paid version, forever. <a href="purchase.html">Claim yours →</a></p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>How do I activate my license?</h3>
+            <ol>
+                <li>Open KatClaw from the menu bar</li>
+                <li>Go to <strong>License</strong> and paste your key</li>
+                <li>Click <strong>Activate</strong> — you're all set</li>
+            </ol>
+        </div>
+        
+        <div class="faq-item">
+            <h3>Can I transfer my license to another Mac?</h3>
+            <p>Yes. In KatClaw's menu bar, click <strong>Transfer License to Another Mac</strong>. This deactivates your current Mac and shows your license key to use on the new one. One Mac at a time.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>I lost my license key</h3>
+            <p><a href="#" onclick="showRecoverStep(); return false;">Click here to recover your key</a> — enter the email you used when you claimed or purchased your license. We'll send a verification code and display your key.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>Can I buy multiple licenses?</h3>
+            <p>Yes. Each $19 purchase generates a new license key. Use different keys on different Macs. All keys are recoverable using the same email address.</p>
+        </div>
+        
+        <!-- Billing -->
+        <h2>Billing</h2>
+        
+        <div class="faq-item">
+            <h3>Is it a subscription?</h3>
+            <p>No. KatClaw is a one-time purchase. You pay once and get free updates forever. No recurring fees.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What about ongoing AI costs?</h3>
+            <p>KatClaw itself is a one-time purchase, but the AI providers charge for API usage. This is separate from KatClaw. Most users spend $1–10/month depending on usage. <a href="ai-providers.html">See AI provider costs →</a></p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>What's your refund policy?</h3>
+            <p>30-day money-back guarantee, no questions asked. Email <strong>support@katclaw.ai</strong> and we'll process your refund. <a href="refund.html">Full refund policy →</a></p>
+        </div>
+
+        <!-- Support -->
+        <h2>Support</h2>
+        
+        <div class="faq-item">
+            <h3>How do I get help?</h3>
+            <p>Email <strong>support@katclaw.ai</strong> and we'll get back to you promptly. You can also use the chat widget on any page of this website.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>Something isn't working</h3>
+            <p>Check that your AI provider API key is valid and has credits. If KatClaw can't connect, try restarting the gateway from the menu bar. For persistent issues, email us with details about what you're seeing.</p>
+        </div>
+    </div>
+    
+    <!-- Recovery Modal -->
+    <div class="modal-overlay" id="recover-modal">
+        <div class="modal">
+            <div id="recover-step-email">
+                <h2>Recover License Key</h2>
+                <p>Enter the email you used to get your license.</p>
+                <div class="modal-error" id="recover-email-error"></div>
+                <input type="email" id="recover-email-input" placeholder="your@email.com" autocomplete="email">
+                <button class="modal-button" id="recover-send-btn" onclick="recoverSendCode()">Send Verification Code</button>
+                <button class="modal-cancel" onclick="closeRecoverModal()">Cancel</button>
+            </div>
+            
+            <div id="recover-step-code" style="display:none;">
+                <h2>Check Your Email</h2>
+                <p>We sent a 6-digit code to <strong id="recover-code-email-display"></strong></p>
+                <div class="modal-error" id="recover-code-error"></div>
+                <input type="text" id="recover-code-input" class="code-input" placeholder="000000" maxlength="6" inputmode="numeric" autocomplete="one-time-code">
+                <button class="modal-button" id="recover-verify-btn" onclick="recoverVerifyCode()">Verify & Recover Key</button>
+                <button class="modal-cancel" onclick="closeRecoverModal()">Cancel</button>
+            </div>
+            
+            <div id="recover-step-keys" style="display:none;">
+                <h2>Your License Keys</h2>
+                <div id="recover-keys-list"></div>
+                <button class="modal-cancel" onclick="closeRecoverModal()" style="margin-top: 16px;">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        Built by <a href="https://apollooneapp.com" target="_blank">Anogeissus</a> · © 2026<br>
+        <a href="privacy.html" style="color: #86868b; margin-right: 12px;">Privacy</a>
+        <a href="termsofuse.html" style="color: #86868b; margin-right: 12px;">Terms of Use</a>
+        <a href="refund.html" style="color: #86868b;">Refund Policy</a>
+    </footer>
+
+    <script>
+        const WORKER_URL = "https://katclaw-paddle-webhook.albert-a40.workers.dev";
+        let recoverEmail = "";
+
+        function showRecoverStep() {
+            document.getElementById("recover-modal").classList.add("active");
+            document.getElementById("recover-step-email").style.display = "";
+            document.getElementById("recover-step-code").style.display = "none";
+            document.getElementById("recover-step-keys").style.display = "none";
+            document.getElementById("recover-email-error").textContent = "";
+            document.getElementById("recover-email-input").value = "";
+            document.getElementById("recover-email-input").focus();
+        }
+
+        function closeRecoverModal() {
+            document.getElementById("recover-modal").classList.remove("active");
+        }
+
+        async function recoverSendCode() {
+            const email = document.getElementById("recover-email-input").value.trim().toLowerCase();
+            const errEl = document.getElementById("recover-email-error");
+            const btn = document.getElementById("recover-send-btn");
+            errEl.textContent = "";
+
+            if (!email || !email.includes("@") || !email.includes(".")) {
+                errEl.textContent = "Please enter a valid email address";
+                return;
+            }
+
+            btn.disabled = true;
+            btn.textContent = "Sending…";
+
+            try {
+                const res = await fetch(`${WORKER_URL}/license/recover-send`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email })
+                });
+                const data = await res.json();
+
+                if (!res.ok) {
+                    errEl.textContent = data.error || "Failed to send code";
+                    btn.disabled = false;
+                    btn.textContent = "Send Verification Code";
+                    return;
+                }
+
+                recoverEmail = email;
+                document.getElementById("recover-code-email-display").textContent = email;
+                document.getElementById("recover-step-email").style.display = "none";
+                document.getElementById("recover-step-code").style.display = "";
+                document.getElementById("recover-code-input").value = "";
+                document.getElementById("recover-code-error").textContent = "";
+                document.getElementById("recover-code-input").focus();
+            } catch (err) {
+                errEl.textContent = "Network error. Please try again.";
+            }
+
+            btn.disabled = false;
+            btn.textContent = "Send Verification Code";
+        }
+
+        async function recoverVerifyCode() {
+            const code = document.getElementById("recover-code-input").value.trim();
+            const errEl = document.getElementById("recover-code-error");
+            const btn = document.getElementById("recover-verify-btn");
+            errEl.textContent = "";
+
+            if (!code || code.length !== 6) {
+                errEl.textContent = "Please enter the 6-digit code";
+                return;
+            }
+
+            btn.disabled = true;
+            btn.textContent = "Verifying…";
+
+            try {
+                const res = await fetch(`${WORKER_URL}/license/recover-verify`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email: recoverEmail, code })
+                });
+                const data = await res.json();
+
+                if (!res.ok) {
+                    errEl.textContent = data.error || "Verification failed";
+                    btn.disabled = false;
+                    btn.textContent = "Verify & Recover Key";
+                    return;
+                }
+
+                const listEl = document.getElementById("recover-keys-list");
+                listEl.innerHTML = data.licenses.map(l => `
+                    <div class="key-box">
+                        <div class="key-label">${l.tier === "founding" ? "Founding License" : "Standard License"}</div>
+                        <div class="key-value">${l.key}</div>
+                    </div>
+                `).join("");
+
+                document.getElementById("recover-step-code").style.display = "none";
+                document.getElementById("recover-step-keys").style.display = "";
+            } catch (err) {
+                errEl.textContent = "Network error. Please try again.";
+                btn.disabled = false;
+                btn.textContent = "Verify & Recover Key";
+            }
+        }
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+                if (document.getElementById("recover-modal").classList.contains("active")) {
+                    if (document.getElementById("recover-step-email").style.display !== "none") {
+                        recoverSendCode();
+                    } else if (document.getElementById("recover-step-code").style.display !== "none") {
+                        recoverVerifyCode();
+                    }
+                }
+            }
+            if (e.key === "Escape") closeRecoverModal();
+        });
+    </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/698e7e8f75334a1c3b4983ab/1jha9so9t';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+</html>
