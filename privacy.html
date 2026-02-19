@@ -90,19 +90,20 @@
         
         <p>KatClaw is built on a simple principle: <strong>your data stays on your Mac</strong>. We designed it this way because privacy matters.</p>
         
-        <h2>What Runs Locally</h2>
-        <p>KatClaw installs and configures OpenClaw on your Mac. Everything runs locally:</p>
+        <h2>Local-Only Architecture</h2>
+        <p>KatClaw is a native macOS application — not a cloud service. There are no hosted servers, no user accounts, and no public-facing endpoints. Everything runs on your Mac:</p>
         <ul>
-            <li>OpenClaw runs on your Mac</li>
-            <li>Your workspace files, memories, and configurations stay on your Mac</li>
-            <li>Your conversations are stored locally</li>
+            <li>KatClaw and OpenClaw run entirely on your local machine</li>
+            <li>All workspace files, configurations, and task logs are stored locally</li>
+            <li>No telemetry, analytics, or usage tracking of any kind</li>
+            <li>No data is shared between users — each installation is independent</li>
         </ul>
         
         <h2>What Leaves Your Mac</h2>
         <p>The only data that leaves your Mac is what you explicitly send to external services:</p>
         <ul>
-            <li><strong>AI Providers:</strong> When you chat with your agent, your messages are sent to your chosen AI provider (Claude, ChatGPT, Gemini, etc.) for processing. This is how AI works — the provider needs your input to generate responses.</li>
-            <li><strong>Telegram:</strong> If you use Telegram to chat with your agent, messages pass through Telegram's servers.</li>
+            <li><strong>AI Providers:</strong> When tasks are processed, prompts are sent to your chosen AI provider (Claude, GPT, Gemini, etc.) via their official APIs. The provider needs input to generate responses — you choose which provider to use.</li>
+            <li><strong>Telegram (optional):</strong> If you configure Telegram as a remote interface, messages pass through Telegram's servers. This is entirely optional.</li>
             <li><strong>License Validation:</strong> KatClaw contacts our licensing server to validate your purchase. We receive your license key and a hardware identifier — no personal data.</li>
         </ul>
         
